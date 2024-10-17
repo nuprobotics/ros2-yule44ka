@@ -12,6 +12,10 @@ permissions:
 jobs:
   check-changes:
     runs-on: ubuntu-latest
+    outputs:
+      task01: ${{ steps.filter.outputs.task01 }}
+      task02: ${{ steps.filter.outputs.task02 }}
+      task03: ${{ steps.filter.outputs.task03 }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -36,7 +40,7 @@ jobs:
   run-autograding-tests-task01:
     runs-on: ubuntu-latest
     needs: check-changes
-    if: github.actor != 'github-classroom[bot]' && (steps.filter.outputs.task01 == 'true')
+    if: github.actor != 'github-classroom[bot]' && needs.check-changes.outputs.task01 == 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -76,7 +80,7 @@ jobs:
   run-autograding-tests-task02:
     runs-on: ubuntu-latest
     needs: check-changes
-    if: github.actor != 'github-classroom[bot]' && (steps.filter.outputs.task02 == 'true')
+    if: github.actor != 'github-classroom[bot]' && needs.check-changes.outputs.task02 == 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -116,7 +120,7 @@ jobs:
   run-autograding-tests-task03:
     runs-on: ubuntu-latest
     needs: check-changes
-    if: github.actor != 'github-classroom[bot]' && (steps.filter.outputs.task03 == 'true')
+    if: github.actor != 'github-classroom[bot]' && needs.check-changes.outputs.task03 == 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
