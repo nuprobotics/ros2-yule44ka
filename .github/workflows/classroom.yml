@@ -20,7 +20,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  # Загружаем два последних коммита
+          fetch-depth: 2
 
       - name: Filter changes
         id: filter
