@@ -20,10 +20,10 @@ jobs:
       - name: Check if there are changes in ./Practice02/src/task01
         id: check
         run: |
-          if git diff --quiet HEAD^ HEAD ./Practice02/src/task01; then
-            echo "::set-output name=changes::false"
-          else
+          if [[ $(git diff --name-only HEAD^ HEAD ./Practice02/src/task01) != "" ]]; then
             echo "::set-output name=changes::true"
+          else
+            echo "::set-output name=changes::false"
           fi
 
   run-autograding-tests-task01:
@@ -79,10 +79,10 @@ jobs:
       - name: Check if there are changes in ./Practice02/src/task02
         id: check
         run: |
-          if git diff --quiet HEAD^ HEAD ./Practice02/src/task02; then
-            echo "::set-output name=changes::false"
-          else
+          if [[ $(git diff --name-only HEAD^ HEAD ./Practice02/src/task02) != "" ]]; then
             echo "::set-output name=changes::true"
+          else
+            echo "::set-output name=changes::false"
           fi
 
   run-autograding-tests-task02:
@@ -138,10 +138,10 @@ jobs:
       - name: Check if there are changes in ./Practice02/src/task03
         id: check
         run: |
-          if git diff --quiet HEAD^ HEAD ./Practice02/src/task03; then
-            echo "::set-output name=changes::false"
-          else
+          if [[ $(git diff --name-only HEAD^ HEAD ./Practice02/src/task03) != "" ]]; then
             echo "::set-output name=changes::true"
+          else
+            echo "::set-output name=changes::false"
           fi
 
   run-autograding-tests-task03:
