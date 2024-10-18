@@ -36,6 +36,8 @@ jobs:
             task03:
               - 'Practice02/src/task03/**'
               - '.github/**'
+            task04:
+              - 'Practice02/src/task04/**'
 
   run-autograding-tests-task01:
     runs-on: ubuntu-latest
@@ -156,3 +158,39 @@ jobs:
           P2T3_RESULTS: "${{steps.P2T3.outputs.result}}"
         with:
           runners: P2T3
+  run-autograding-tests-task04:
+    runs-on: ubuntu-latest
+    needs: check-changes
+    if: github.actor != 'github-classroom[bot]' && needs.check-changes.outputs.task04 == 'true'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Pull testing environment
+        run: docker pull spgc/robotics_cv:p02
+      - name: Build testing environment
+        run: |
+          ls
+          echo "FROM spgc/robotics_cv:p02
+          WORKDIR /test_ws/
+          COPY ./Practice02/src /test_ws/src
+          RUN ./entrypoint.sh" > Dockerfile
+          docker build -t custom_student_image .
+      - name: P2T4
+        id: P2T4
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: P2T4
+          command: docker run --rm --name task04 --entrypoint "/test_ws/task04_test.sh" custom_student_image:latest
+          timeout: 15
+          max-score: '1'
+      - name: Update Google Sheets with Task04 results
+        uses: SPGC/ClassroomToSheetsIntegration@master
+        with:
+          student-name: "${{ github.actor }}"
+          robot-email: "${{ secrets.ROBOT_EMAIL }}"
+          private-api-key: "${{ secrets.PRIVATE_API_KEY }}"
+          task-results: "${{ steps.P2T4.outputs.result }}"
+          table-id: "${{ secrets.TABLE_ID }}"
+      - name:    
+        run: |
+          echo "Task is sent"
