@@ -16,6 +16,7 @@ jobs:
       task01: ${{ steps.filter.outputs.task01 }}
       task02: ${{ steps.filter.outputs.task02 }}
       task03: ${{ steps.filter.outputs.task03 }}
+      task04: ${{ steps.filter.outputs.task04 }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
