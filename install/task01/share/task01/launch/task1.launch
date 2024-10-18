@@ -1,0 +1,7 @@
+<launch>
+    <node
+        pkg="task01"
+        executable="receiver"
+        output="screen">
+    </node>
+</launch>

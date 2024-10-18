@@ -1,0 +1,24 @@
+[6.563s] Invoking command in '/workspace/Practice02/src/task01': PYTHONPATH=/workspace/build/task01/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/task01/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/task01 build --build-base /workspace/build/task01/build install --record /workspace/build/task01/install.log --single-version-externally-managed install_data
+[9.408s] running egg_info
+[9.419s] writing ../../../build/task01/task01.egg-info/PKG-INFO
+[9.435s] writing dependency_links to ../../../build/task01/task01.egg-info/dependency_links.txt
+[9.447s] writing entry points to ../../../build/task01/task01.egg-info/entry_points.txt
+[9.456s] writing requirements to ../../../build/task01/task01.egg-info/requires.txt
+[9.463s] writing top-level names to ../../../build/task01/task01.egg-info/top_level.txt
+[9.548s] reading manifest file '../../../build/task01/task01.egg-info/SOURCES.txt'
+[9.721s] writing manifest file '../../../build/task01/task01.egg-info/SOURCES.txt'
+[9.729s] running build
+[9.731s] running build_py
+[9.756s] copying task01/receiver.py -> /workspace/build/task01/build/lib/task01
+[9.810s] running install
+[9.811s] running install_lib
+[9.879s] copying /workspace/build/task01/build/lib/task01/receiver.py -> /workspace/install/task01/lib/python3.10/site-packages/task01
+[9.968s] byte-compiling /workspace/install/task01/lib/python3.10/site-packages/task01/receiver.py to receiver.cpython-310.pyc
+[10.074s] running install_data
+[10.181s] copying launch/task01.launch -> /workspace/install/task01/share/task01/launch
+[10.242s] running install_egg_info
+[10.294s] removing '/workspace/install/task01/lib/python3.10/site-packages/task01-0.0.0-py3.10.egg-info' (and everything under it)
+[10.425s] Copying ../../../build/task01/task01.egg-info to /workspace/install/task01/lib/python3.10/site-packages/task01-0.0.0-py3.10.egg-info
+[10.947s] running install_scripts
+[11.208s] writing list of installed files to '/workspace/build/task01/install.log'
+[11.272s] Invoked command in '/workspace/Practice02/src/task01' returned '0': PYTHONPATH=/workspace/build/task01/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/task01/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/task01 build --build-base /workspace/build/task01/build install --record /workspace/build/task01/install.log --single-version-externally-managed install_data

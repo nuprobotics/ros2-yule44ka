@@ -1,0 +1,39 @@
+[5.785s] Invoking command in '/workspace/Practice02/src/task01': PYTHONPATH=/workspace/Practice02/build/task01/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/Practice02/install/task01/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/task01 build --build-base /workspace/Practice02/build/task01/build install --record /workspace/Practice02/build/task01/install.log --single-version-externally-managed install_data
+[8.681s] running egg_info
+[8.693s] creating ../../build/task01/task01.egg-info
+[8.704s] writing ../../build/task01/task01.egg-info/PKG-INFO
+[8.728s] writing dependency_links to ../../build/task01/task01.egg-info/dependency_links.txt
+[8.746s] writing entry points to ../../build/task01/task01.egg-info/entry_points.txt
+[8.765s] writing requirements to ../../build/task01/task01.egg-info/requires.txt
+[8.776s] writing top-level names to ../../build/task01/task01.egg-info/top_level.txt
+[8.795s] writing manifest file '../../build/task01/task01.egg-info/SOURCES.txt'
+[8.931s] reading manifest file '../../build/task01/task01.egg-info/SOURCES.txt'
+[9.144s] writing manifest file '../../build/task01/task01.egg-info/SOURCES.txt'
+[9.153s] running build
+[9.156s] running build_py
+[9.176s] creating /workspace/Practice02/build/task01/build
+[9.184s] creating /workspace/Practice02/build/task01/build/lib
+[9.192s] creating /workspace/Practice02/build/task01/build/lib/task01
+[9.225s] copying task01/receiver.py -> /workspace/Practice02/build/task01/build/lib/task01
+[9.298s] copying task01/__init__.py -> /workspace/Practice02/build/task01/build/lib/task01
+[9.351s] running install
+[9.354s] running install_lib
+[9.409s] creating /workspace/Practice02/install/task01/lib/python3.10/site-packages/task01
+[9.437s] copying /workspace/Practice02/build/task01/build/lib/task01/receiver.py -> /workspace/Practice02/install/task01/lib/python3.10/site-packages/task01
+[9.512s] copying /workspace/Practice02/build/task01/build/lib/task01/__init__.py -> /workspace/Practice02/install/task01/lib/python3.10/site-packages/task01
+[9.595s] byte-compiling /workspace/Practice02/install/task01/lib/python3.10/site-packages/task01/receiver.py to receiver.cpython-310.pyc
+[9.663s] byte-compiling /workspace/Practice02/install/task01/lib/python3.10/site-packages/task01/__init__.py to __init__.cpython-310.pyc
+[9.733s] running install_data
+[9.751s] creating /workspace/Practice02/install/task01/share/ament_index
+[9.757s] creating /workspace/Practice02/install/task01/share/ament_index/resource_index
+[9.768s] creating /workspace/Practice02/install/task01/share/ament_index/resource_index/packages
+[9.811s] copying resource/task01 -> /workspace/Practice02/install/task01/share/ament_index/resource_index/packages
+[9.902s] copying package.xml -> /workspace/Practice02/install/task01/share/task01
+[9.967s] creating /workspace/Practice02/install/task01/share/task01/launch
+[9.990s] copying launch/task01.launch -> /workspace/Practice02/install/task01/share/task01/launch
+[10.033s] running install_egg_info
+[10.091s] Copying ../../build/task01/task01.egg-info to /workspace/Practice02/install/task01/lib/python3.10/site-packages/task01-0.0.0-py3.10.egg-info
+[10.687s] running install_scripts
+[10.923s] Installing receiver script to /workspace/Practice02/install/task01/lib/task01
+[10.947s] writing list of installed files to '/workspace/Practice02/build/task01/install.log'
+[10.993s] Invoked command in '/workspace/Practice02/src/task01' returned '0': PYTHONPATH=/workspace/Practice02/build/task01/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/Practice02/install/task01/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/task01 build --build-base /workspace/Practice02/build/task01/build install --record /workspace/Practice02/build/task01/install.log --single-version-externally-managed install_data

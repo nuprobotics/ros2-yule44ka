@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="task01" exec="receiver" name="receiver" output="screen">
+        <param name="log_level" value="INFO"/>
+    </node>
+</launch>
